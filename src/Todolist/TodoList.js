@@ -22,8 +22,11 @@ function TodoList() {
   };
 
   useEffect(() => {
-    console.log(list)
-  }, [list])
+    if (list.length > 0) {
+      console.log(list); // 상태가 변경될 때만 출력하도록
+    }
+  }, [list]);
+  
 
   /////////////////////////////////////////////////////////////////////// 완료항목,해야할일 필터링되는 로직 / button컴포넌트에서 매개변수로 done,todo값을 받아와야함
   const getFilteredList = () => {

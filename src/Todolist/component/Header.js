@@ -21,10 +21,13 @@ function Header({ addTodo }) {
   }
 
   const enterKeyUpAdd = (e) => {
-    if(e.key === "Enter"){
+    if (e.key === "Enter" && inputText.trim() !== '') {
       add();
+    } else if (e.key === "Enter" && inputText.trim() === '') {
+      alert("할일을 입력해주세요!");
     }
-  }
+  };
+  
 
   return (
     <div className='headerWrap'>
