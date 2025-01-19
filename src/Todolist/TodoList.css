@@ -121,6 +121,7 @@ body {
 }
 .btnWrap button {
   background-color: darkcyan;
+  color: #fff;
   border: none;
   border-radius: 10px;
   min-width: 80px;
